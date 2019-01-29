@@ -1,0 +1,18 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<header class="notfixed header">
+	<div class="container logo-wrap">
+		<f:render partial="Logo" arguments="{_all}" />
+        <div class="search-wrap">
+            {v:content.render( pageUid: 949)}
+        </div>
+        <div class="lang-wrap">
+            <f:render partial="LangNav" arguments="{_all}" />
+        </div>
+	</div> 
+    
+	<div class="border border-top border-bottom">
+		<div class="container">
+			<f:render partial="Navigation" arguments="{_all}" />
+		</div>
+	</div>
+</header>

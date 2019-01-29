@@ -1,0 +1,40 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:render partial="header" arguments="{_all}" />
+{v:asset.style(path: 'EXT:fx_muenker/Ressources/Public/CSS/productslider.css', external: 0 name: 'produtcslider')}
+<main class="withsidebar product">
+	<div class="container">
+         <f:render partial="Breadcrumb" arguments="{_all}" />
+     
+        <f:comment>
+          <v:condition.iterator.contains needle="2" haystack="{v:page.rootline() -> v:iterator.extract(key: 'uid')}">
+                  <div class="row">
+                            <div class="col-md-9">
+                                <f:render partial="Categorymenu" arguments="{_all}" />		
+                            </div>
+                            <div class="col-md-3">
+                                {v:content.render(column: 0, pageUid: 124)}
+                            </div>
+                    </div>
+            </v:condition.iterator.contains>
+        </f:comment>
+        <div class="row">
+                <div class="col-md-12">  
+                    <hr />
+                 </div>
+            </div>
+        
+		<div class="row">
+            <f:comment>
+                <div class="col-md-3 col-sm-4 hidden-xs">
+                    <f:render partial="sidenav" arguments="{_all}" /> 
+                    <f:format.raw>{sidebar}</f:format.raw>
+                </div>
+            </f:comment>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<f:render section="content" />
+			</div>
+		</div>
+	</div>
+	
+</main>
+<f:render partial="footer" arguments="{footer:footer}" /> 
