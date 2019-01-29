@@ -28,7 +28,7 @@ a:visited {
   color: #082b53;
 }
 body {
-  color: #707070;
+  color: #333;
 }
 h1,
 h2,
@@ -56,16 +56,16 @@ select::-ms-expand {
   color: #082b53;
 }
 .clfo-orange {
-  color: #dc9a29;
+  color: #DC9A29;
 }
 .clfo-darkorange {
-  color: #c58a1f;
+  color: #C58A1F;
 }
 .clfo-white {
-  color: #ffffff;
+  color: #fff;
 }
 .clfo-black {
-  color: #000000;
+  color: #000;
 }
 .clfo-lightgray {
   color: #efefef;
@@ -80,16 +80,16 @@ select::-ms-expand {
   background-color: #082b53;
 }
 .clbg-orange {
-  background-color: #dc9a29;
+  background-color: #DC9A29;
 }
 .clbg-darkorange {
-  background-color: #c58a1f;
+  background-color: #C58A1F;
 }
 .clbg-white {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .clbg-black {
-  background-color: #000000;
+  background-color: #000;
 }
 .clbg-lightgray {
   background-color: #efefef;
@@ -184,7 +184,7 @@ footer ul li {
     top: 0;
     height: 100%;
     width: 1px;
-    background-color: #ffffff;
+    background-color: #fff;
   }
   .kategoriebox .ce-column:last-child:after {
     display: none;
@@ -861,10 +861,10 @@ a[href*=".pdf"] span {
 }
 a[href*=".pdf"]:before {
   content: '\f1c1';
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", serif;
   display: inline-block;
   margin-right: 3px;
-  color: #dc9a29;
+  color: #DC9A29;
 }
 a[href*=".pdf"].noicon:before {
   display: none;
@@ -893,7 +893,7 @@ body > header.header {
 }
 @media (max-width: 767px) {
   body > header.header {
-    background-color: #ffffff;
+    background-color: #fff;
   }
 }
 @media (min-width: 768px) {
@@ -938,7 +938,7 @@ body > header.header.small .logo-wrap {
 }
 .ce-uploads li a[href*=".pdf"]:before {
   content: '\f1c1';
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", serif;
   display: table-cell;
   padding-right: 3px;
   color: #082b53;
@@ -948,7 +948,7 @@ body > header.header.small .logo-wrap {
 }
 .ce-uploads li a[href*=".dwg"]:before {
   content: '\f016';
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", serif;
   display: table-cell;
   padding-right: 3px;
   color: #082b53;
@@ -967,14 +967,14 @@ body > header.header.small .logo-wrap {
   }
 }
 .clbg-black {
-  color: #ffffff;
+  color: #fff;
 }
 .clbg-black b,
 .clbg-black strong {
   color: #082b53;
 }
 .clbg-blue {
-  color: #ffffff;
+  color: #fff;
 }
 .container .container {
   width: 100%;
@@ -1029,7 +1029,7 @@ body > header.header.small .logo-wrap {
     border: 0;
     float: left;
     background-color: transparent;
-    color: #dc9a29;
+    color: #DC9A29;
     font-size: 36px;
     padding-right: 20px;
   }
@@ -1053,7 +1053,7 @@ body > header.header.small .logo-wrap {
   width: 40px;
   height: 48px;
   background-color: #082b53;
-  color: #dc9a29;
+  color: #DC9A29;
   position: relative;
   float: right;
   font-size: 24px;
@@ -1074,7 +1074,6 @@ body > header.header.small .logo-wrap {
   }
 }
 #header-nav .level-one {
-  margin-bottom: 0;
   padding-left: 0;
   position: relative;
   display: table;
@@ -1123,14 +1122,13 @@ body > header.header.small .logo-wrap {
 }
 #header-nav .level-one > li > a {
   width: 100%;
-  height: 100%;
   position: relative;
   display: inline-block;
   padding: 0 20px;
   font-size: 15px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   z-index: 50;
   border-right: 1px solid white;
   height: 48px;
@@ -1198,7 +1196,6 @@ body > header.header.small .logo-wrap {
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  margin-left: 0px;
   background-color: #082b53;
   padding: 0;
   margin: 0;
@@ -1225,8 +1222,8 @@ body > header.header.small .logo-wrap {
 }
 #header-nav .level-two > li:hover > a {
   background: none;
-  background-color: #dc9a29;
-  color: #ffffff;
+  background-color: #DC9A29;
+  color: #fff;
 }
 @media (max-width: 991px) {
   #header-nav .level-two {
@@ -1245,7 +1242,7 @@ body > header.header.small .logo-wrap {
   }
 }
 #header-nav .level-two a {
-  color: #ffffff;
+  color: #fff;
 }
 @media (min-width: 992px) {
   #header-nav #nav635 ul,
@@ -1285,8 +1282,8 @@ body > header.header.small .logo-wrap {
 }
 #header-nav .level-three > li:hover > a {
   background: none;
-  background-color: #dc9a29;
-  color: #ffffff;
+  background-color: #DC9A29;
+  color: #fff;
 }
 @media (max-width: 991px) {
   #header-nav .level-three {
@@ -1331,12 +1328,12 @@ body > header.header.small .logo-wrap {
 }
 #header-nav ul li:hover > a,
 #header-nav ul li.active > a {
-  color: #dc9a29;
+  color: #DC9A29;
   text-decoration: none;
 }
 #header-nav ul li ul li:hover > a,
 #header-nav ul li ul li.active > a {
-  color: #dc9a29;
+  color: #DC9A29;
   background: none;
   background-color: #082b53;
   text-decoration: none;
@@ -1358,7 +1355,7 @@ main {
   height: 24px;
   line-height: 24px;
   display: block;
-  color: #ffffff;
+  color: #fff;
 }
 ul.reference {
   list-style: none;
@@ -1370,7 +1367,7 @@ ul.reference li {
   width: 32.2222%;
   margin: 1.1111% 0 0 12px;
   background-color: #efefef;
-  color: #000000;
+  color: #000;
   padding: 10px;
 }
 @media (max-width: 1199px) {
@@ -1396,13 +1393,13 @@ ul.reference li {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background: #ffffff;
+  background: #fff;
   text-indent: 9999px;
   overflow: hidden;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
 }
 .flex-control-paging li a.flex-active {
-  background: #dc9a29;
+  background: #DC9A29;
 }
 @media (max-width: 768px) {
   .news .article .news-img-wrap {
@@ -1453,7 +1450,7 @@ ul.reference li {
   padding: 0 5px;
   text-align: left;
   background: none;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #082b53;
   border: 1px solid #082b53;
 }
@@ -1484,7 +1481,7 @@ ul.reference li {
 }
 .lang-wrap .btn-default {
   background: none;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #082b53;
 }
 .lang-wrap .dropdown-menu {
@@ -1521,7 +1518,7 @@ ul.reference li {
 }
 .kesearch_pagebrowser ul li a.current {
   background-color: #082b53;
-  color: #dc9a29;
+  color: #DC9A29;
 }
 #kesearch_results .result-list-item {
   margin-bottom: 15px;
@@ -1529,3 +1526,4 @@ ul.reference li {
 #kesearch_results .result-list-item .result-title {
   font-size: 20px;
 }
+/*# sourceMappingURL=stylesheet.css.map */

@@ -19,12 +19,15 @@ Templates/SearchForm.html
 		<f:if condition="{typeparam}">
 			<input type="hidden" name="type" value="{typeparam}" />
 		</f:if>
-		<input type="text" class="searchbox btn btn-default"  name="tx_kesearch_pi1[sword]" value="{searchword -> f:format.raw()}" placeholder="{searchwordDefault}" />
+		<input type="text" class="searchbox btn btn-default"
+			   aria-label="{searchwordDefault}"
+			   name="tx_kesearch_pi1[sword]" value="{searchword -> f:format.raw()}"
+			   placeholder="{searchwordDefault}" />
 		<input id="kesearchpagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="{page}" />
 		<input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
 		<input id="sortByField" type="hidden" name="tx_kesearch_pi1[sortByField]" value="{sortByField}" />
 		<input id="sortByDir" type="hidden" name="tx_kesearch_pi1[sortByDir]" value="{sortByDir}" />
-		<button type="submit" class="submit searchsubmit">
+		<button type="submit" class="submit searchsubmit" role="button" aria-label="Search">
 				<i class="fa fa-search clfo-cyan"></i>
 		</button>
 

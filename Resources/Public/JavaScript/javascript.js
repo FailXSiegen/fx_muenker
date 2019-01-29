@@ -1,11 +1,14 @@
-$(window).scroll(function() {
+document.addEventListener('wheel', (evt) => {
     window_top = $(window).scrollTop();
     subnavscrollTop = window_top+150;
     if (window_top > 0) {
-      $('header.header').addClass('small');
+        $('header.header').addClass('small');
     } else {
-      $('header.header').removeClass('small');
+        $('header.header').removeClass('small');
     }
+}, {
+    capture: true,
+    passive: true
 });
 $(document).ready(function() {
 	$('.button_back').click(function() {
@@ -18,7 +21,7 @@ $(document).ready(function() {
 		window.print();
 		return false;
 	});
-	$('.routenplaner').append('<form action="http://maps.google.com/maps" method="get" target="_blank"> <label>Startadresse (mit Ort)</label><input class="inputbox" type="text" name="saddr" value="" /><input type="hidden" name="daddr" value="Gewerbeparkstraße 19, 51580 Reichshof-Wehnrath" /><button type="submit">Karte aufrufen</button></form>');
+	$('.routenplaner').append('<form action="https://maps.google.com/maps" method="get" target="_blank"> <label>Startadresse (mit Ort)</label><input class="inputbox" type="text" name="saddr" value="" /><input type="hidden" name="daddr" value="Gewerbeparkstraße 19, 51580 Reichshof-Wehnrath" /><button type="submit">Karte aufrufen</button></form>');
 	$('.withsub').click(function() {
 		$(this).toggleClass('fa-caret-down').toggleClass('fa-caret-up').toggleClass('active');
 		$(this).next().toggleClass('open');

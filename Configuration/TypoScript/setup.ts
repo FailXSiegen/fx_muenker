@@ -25,7 +25,7 @@ config {
   typolinkCheckRootline = 1
   contentObjectExceptionHandler = 0
   noPageTitle = 2
-  absRefPrefix = http://www.muenker.com/
+  absRefPrefix = https://www.muenker.com/
   
 }
 tmp.content < styles.content.get
@@ -87,19 +87,19 @@ page {
       key.override.field = backend_layout
       
       3 = TEXT
-      3.value = EXT:fx_muenker/Ressources/Private/Templates/pages/Sidebar.html
+      3.value = EXT:fx_muenker/Resources/Private/Templates/pages/Sidebar.html
       
             4 = TEXT
-      4.value = EXT:fx_muenker/Ressources/Private/Templates/pages/Products.html
+      4.value = EXT:fx_muenker/Resources/Private/Templates/pages/Products.html
             
       default = TEXT
-      default.value = EXT:fx_muenker/Ressources/Private/Templates/pages/Default.html
+      default.value = EXT:fx_muenker/Resources/Private/Templates/pages/Default.html
     }
     layoutRootPaths {
-      10 = EXT:fx_muenker/Ressources/Private/Layouts/pages/
+      10 = EXT:fx_muenker/Resources/Private/Layouts/pages/
     }
     partialRootPaths {
-      10 =  EXT:fx_muenker/Ressources/Private/Partials/pages/
+      10 =  EXT:fx_muenker/Resources/Private/Partials/pages/
     }
     variables {       
       content < tmp.content
@@ -125,7 +125,7 @@ page {
     5 = TEXT
     5.value = <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
     10 = TEXT
-    10.value = <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    10.value = <meta name="viewport" content="width=device-width, initial-scale=1">
     40 = TEXT
     40 {
         stdWrap.cObject = COA
@@ -218,82 +218,36 @@ page {
   }
  }
   
-  includeCSS {
-    bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
-        bootstrap.external = 1
-    bootstrap {
-            forceOnTop = 1
-            media = all
+    includeCSS {
+        bootstrap = EXT:fx_muenker/Resources/Public/Vendor/bootstrap/dist/css/bootstrap.min.css
+        bootstraptheme = EXT:fx_muenker/Resources/Public/Vendor/bootstrap/dist/css/bootstrap-theme.min.css
+        fancy = EXT:fx_muenker/Resources/Public/CSS/fancybox/jquery.fancybox.css
+        owl1 = EXT:fx_muenker/Resources/Public/CSS/owl/owl.carousel.css
+        stylesheet = EXT:fx_muenker/Resources/Public/CSS/stylesheet.css
     }
-    bootstraptheme = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css
-        bootstraptheme.external = 1
-    bootstraptheme {
-      media = all
-    }
-    # awesome = EXT:fx_muenker/Ressources/Public/CSS/font-awesome.css
-    # awesome {
-      # media = screen
-    # }
-    fancy = EXT:fx_muenker/Ressources/Public/CSS/fancybox/jquery.fancybox.css
-    fancy {
-      media = screen
-     }
-
-    owl1 = EXT:fx_muenker/Ressources/Public/CSS/owl/owl.carousel.css
-    owl1 {
-      media = screen
-    }
-    
-    stylesheet = EXT:fx_muenker/Ressources/Public/CSS/stylesheet.css
-    stylesheet.media = screen
-
-  }
     includeJSLibs {
-        jquery = https://code.jquery.com/jquery-2.2.4.min.js
-    jquery {
-            external = 1
-      forceOnTop = 1
-      disableCompression = 1
-      excludeFromConcatenation = 1
-    } 
-           
-    bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
-        bootstrap {
-            external = 1
-      disableCompression = 1
-      excludeFromConcatenation = 1
-    } 
-        
+        jquery =  EXT:fx_muenker/Resources/Public/Vendor/jquery/dist/jquery.min.js
+        bootstrap = EXT:fx_muenker/Resources/Public/Vendor/bootstrap/dist/js/bootstrap.min.js
+        tether = EXT:fx_muenker/Resources/Public/Vendor/tether/dist/js/tether.min.js
     }
-  includeJS {
-    #jquery = https://code.jquery.com/jquery-3.1.1.slim.min.js
-      
-        tether = https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js
-    tether {
-            external = 1
-      disableCompression = 1
-      excludeFromConcatenation = 1
-    } 
-     
-  }
-  includeJSFooter { 
-    owl = EXT:fx_muenker/Ressources/Public/JavaScript/owl/owl.carousel.js
-    fancy = EXT:fx_muenker/Ressources/Public/JavaScript/fancybox/jquery.fancybox.js
-        jcarousel = EXT:fx_muenker/Ressources/Public/JavaScript/jcarousel.js
-        farbwechsler = EXT:fx_muenker/Ressources/Public/JavaScript/farbwechsler.js
-    custom = EXT:fx_muenker/Ressources/Public/JavaScript/javascript.js
-  }
-  meta {
-    robots = index,follow
-    description.field = description
+    includeJSFooter {
+        owl = EXT:fx_muenker/Resources/Public/JavaScript/owl/owl.carousel.js
+        fancy = EXT:fx_muenker/Resources/Public/JavaScript/fancybox/jquery.fancybox.js
+        jcarousel = EXT:fx_muenker/Resources/Public/JavaScript/jcarousel.js
+        farbwechsler = EXT:fx_muenker/Resources/Public/JavaScript/farbwechsler.js
+        custom = EXT:fx_muenker/Resources/Public/JavaScript/javascript.js
+    }
+    meta {
+        robots = index,follow
+        description.field = description
         description.stdWrap.stripHtml = 1
-  }
+    }
 }
 plugin {
   tx_kesearch_pi1 {
-    templateRootPaths.5 = EXT:fx_muenker/Ressources/Private/Templates/ke_search/
-    partialRootPaths.5 = EXT:fx_muenker/Ressources/Private/Partials/ke_search/
-    layoutRootPaths.5 = EXT:fx_muenker/Ressources/Private/Layouts/ke_search/
+    templateRootPaths.5 = EXT:fx_muenker/Resources/Private/Templates/ke_search/
+    partialRootPaths.5 = EXT:fx_muenker/Resources/Private/Partials/ke_search/
+    layoutRootPaths.5 = EXT:fx_muenker/Resources/Private/Layouts/ke_search/
   }
   tx_kesearch_pi2 {
     highlightedWord_stdWrap.wrap = <div class="mark">|</div>  
@@ -445,9 +399,9 @@ lib.bootstrap_grids.accordion.columns.101.renderObj.10.wrap = <div class="panel-
 tt_content.gridelements_pi1.20.10.setup.accordion.columns.101.renderObj.10.wrap = <div class="panel-heading"><h2 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-{field:tx_gridelements_container}" href="#collapse-{field:uid}" aria-expanded="false" aria-controls="collapse-{field:uid}" class="collapsed accordion-toggle">|</a></h2></div><div id="collapse-{field:uid}" class="panel-collapse collapse" role="tabpanel"><div class="panel-body">
 plugin.tx_news.settings.list.paginate.insertAbove = 0
 
-plugin.tx_kesearch_pi2.templateRootPath = EXT:fx_muenker/Ressources/Private/Templates/ke_search/
-plugin.tx_kesearch_pi2.layoutRootPath = EXT:fx_muenker/Ressources/Private/Layouts/ke_search/
-plugin.tx_kesearch_pi2.partialRootPath = EXT:fx_muenker/Ressources/Private/Partials/ke_search/
+plugin.tx_kesearch_pi2.templateRootPath = EXT:fx_muenker/Resources/Private/Templates/ke_search/
+plugin.tx_kesearch_pi2.layoutRootPath = EXT:fx_muenker/Resources/Private/Layouts/ke_search/
+plugin.tx_kesearch_pi2.partialRootPath = EXT:fx_muenker/Resources/Private/Partials/ke_search/
 
 lib.language = COA
 lib.language {
