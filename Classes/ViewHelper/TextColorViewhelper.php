@@ -27,7 +27,6 @@
 
 namespace Failx\FxMuenker\ViewHelpers;
 
-use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
@@ -48,6 +47,7 @@ class TextColorViewHelper extends AbstractTagBasedViewHelper
     {
         $color_array = $this->HexToRGB($color);
         $mittelwert = ($color_array['r']+$color_array['g']+$color_array['b']) / 3;
+
         if($mittelwert > 127) {
             $text_color = '#444';
         } else {
@@ -59,13 +59,12 @@ class TextColorViewHelper extends AbstractTagBasedViewHelper
     /**
      * Converts the given rhb to a contrast textcolor
      *
-     * @param string $color
+     * @param string $hex
      * @return array
      */
     private function HexToRGB($hex) {
-        $hex = preg_replace("#", "", $hex);
+        $hex = str_replace("#", "", $hex);
         $color = array();
-        
         if(strlen($hex) == 3) {
             $color['r'] = hexdec(substr($hex, 0, 1) . $r);
             $color['g'] = hexdec(substr($hex, 1, 1) . $g);

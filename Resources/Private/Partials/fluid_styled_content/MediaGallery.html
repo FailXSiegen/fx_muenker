@@ -59,18 +59,18 @@
 	<f:if condition="{column.media.link}">
 		<f:then>
 			<f:link.typolink parameter="{column.media.link}">
-				<f:render section="media" arguments="{_all}" />
+				<f:render section="image" arguments="{_all}" />
 			</f:link.typolink>
 		</f:then>
 		<f:else>
 			<f:if condition="{data.image_zoom}">
 				<f:then>
 					<ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
-						<f:render section="media" arguments="{_all}" />
+						<f:render section="image" arguments="{_all}" />
 					</ce:link.clickEnlarge>
 				</f:then>
 				<f:else>
-					<f:render section="media" arguments="{_all}" />
+					<f:render section="image" arguments="{_all}" />
 				</f:else>
 			</f:if>
 		</f:else>
@@ -94,5 +94,17 @@
 		title="{column.media.title}"
         class="img img-responsive"
 	/>
+</f:section>
+
+<f:section name="image">
+	<picture>
+		<source media="(min-width: 1600px)" srcset="{f:uri.image(src:'{column.media.uid}',treatIdAsReference:'1',width:'1600m',cropVariant:'default')}">
+		<source media="(max-width: 1199px) and (min-width:992px)" srcset="{f:uri.image(src:'{column.media.uid}',treatIdAsReference:'1',maxWidth:'1200m',cropVariant:'desktop-md')}">
+		<source media="(max-width: 991px) and (orientation:portrait)" srcset="{f:uri.image(src:'{column.media.uid}',treatIdAsReference:'1',width:'900m',cropVariant:'tablet-portrait')}">
+		<source media="(max-width: 991px) and (orientation:landscape)" srcset="{f:uri.image(src:'{column.media.uid}',treatIdAsReference:'1',width:'900m',cropVariant:'tablet-landscape')}">
+		<source media="(max-width: 767px) and (orientation:portrait)" srcset="{f:uri.image(src:'{column.media.uid}',treatIdAsReference:'1',width:'767m',cropVariant:'smartphone-portrait')}">
+		<source media="(max-width: 767px) and (orientation:landscape)" srcset="{f:uri.image(src:'{column.media.uid}',treatIdAsReference:'1',width:'767m',cropVariant:'smartphone-landscape')}">
+		<f:image treatIdAsReference="1" class="img img-responsive" src="{column.media.uid}" title="{column.media.title}" alt="{column.media.alternative}" crop="{image.crop}" />
+	</picture>
 </f:section>
 </html>

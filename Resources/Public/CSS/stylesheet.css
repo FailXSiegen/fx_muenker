@@ -109,6 +109,9 @@ select::-ms-expand {
 .head .ce-bodytext a:hover {
   color: #082b53;
 }
+.mark {
+  display: inline;
+}
 main ul {
   padding: 0;
   margin: 0;

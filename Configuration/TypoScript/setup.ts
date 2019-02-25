@@ -221,6 +221,7 @@ page {
     includeCSS {
         bootstrap = EXT:fx_muenker/Resources/Public/Vendor/bootstrap/dist/css/bootstrap.min.css
         bootstraptheme = EXT:fx_muenker/Resources/Public/Vendor/bootstrap/dist/css/bootstrap-theme.min.css
+        fontawesome = EXT:fx_muenker/Resources/Public/Vendor/font-awesome/css/font-awesome.min.css
         fancy = EXT:fx_muenker/Resources/Public/CSS/fancybox/jquery.fancybox.css
         owl1 = EXT:fx_muenker/Resources/Public/CSS/owl/owl.carousel.css
         stylesheet = EXT:fx_muenker/Resources/Public/CSS/stylesheet.css
