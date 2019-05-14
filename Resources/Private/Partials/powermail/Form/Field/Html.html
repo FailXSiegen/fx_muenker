@@ -13,7 +13,7 @@
 				<f:format.raw>{field.text}</f:format.raw>
 			</f:then>
 			<f:else>
-				<vh:string.RawAndRemoveXss>{field.text}</vh:string.RawAndRemoveXss>
+				<vh:string.escapeLabels>{field.text}</vh:string.escapeLabels>
 			</f:else>
 		</f:if>
 	</div>

@@ -1,5 +1,5 @@
 {namespace vh=In2code\Powermail\ViewHelpers}
-<fieldset class="powermail_fieldset powermail_fieldset_{page.uid} {page.css}">
+<fieldset class="powermail_fieldset powermail_fieldset_{page.uid} {page.css} row">
 	<f:for each="{page.fields}" as="field">
 		<f:render partial="Form/Field/{vh:String.Upper(string:field.type)}" arguments="{field:field}" />
 	</f:for>

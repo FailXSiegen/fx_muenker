@@ -8,31 +8,29 @@ Render Powermail Form
 
 <f:section name="main">
 	<f:alias map="{flashMessageClass:'powermail_message_error'}">
-		<f:render partial="FlashMessages/{vh:Misc.GetFlashMessagesPartialName()}" arguments="{_all}" />
+		<f:render partial="Misc/FlashMessages" arguments="{_all}" />
 	</f:alias>
 
 
 	<f:if condition="{form}">
 		<f:then>
-			<div class="container-fluid">
-				<f:form
-						action="{action}"
-						name="field"
-						enctype="multipart/form-data"
-						additionalAttributes="{vh:Validation.EnableParsleyAndAjax(form:form)}"
-						addQueryString="{settings.misc.addQueryString}"
-						class="powermail_form powermail_form_{form.uid} {form.css} {settings.styles.framework.formClasses} {vh:Misc.MorestepClass(activate:settings.main.moresteps)}">
+		<f:form
+				action="{action}"
+				name="field"
+				enctype="multipart/form-data"
+				additionalAttributes="{vh:Validation.EnableParsleyAndAjax(form:form)}"
+				addQueryString="{settings.misc.addQueryString}"
+				class="powermail_form powermail_form_{form.uid} {form.css} {settings.styles.framework.formClasses} {vh:Misc.MorestepClass(activate:settings.main.moresteps)}">
 
-					<f:render partial="Misc/FormError" arguments="{_all}" />
+			<f:render partial="Misc/FormError" arguments="{_all}" />
 
-					<f:for each="{form.pages}" as="page">
-						<f:render partial="Form/Page" arguments="{_all}" />
-					</f:for>
+			<f:for each="{form.pages}" as="page">
+				<f:render partial="Form/Page" arguments="{_all}" />
+			</f:for>
 
-					<f:form.hidden name="mail[form]" value="{form.uid}" class="powermail_form_uid" />
-					<f:render partial="Misc/HoneyPod" arguments="{form:form}" />
-				</f:form>
-			</div>
+			<f:form.hidden name="mail[form]" value="{form.uid}" class="powermail_form_uid" />
+			<f:render partial="Misc/HoneyPod" arguments="{form:form}" />
+		</f:form>
 		</f:then>
 		<f:else>
 			<f:translate key="error_no_form" />
