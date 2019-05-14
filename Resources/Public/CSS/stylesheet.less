@@ -309,7 +309,30 @@ body > header.header {
         .transition(background-position .1s ease-in);
     
     }
-    
+    .phone {
+      position: absolute;
+      right:15px;
+      top:45px;
+      &.h2 {
+        margin-top:0;
+      }
+      @media(max-width:767px) {
+        left:225px;
+        right:auto;
+        top:0;
+      }
+      @media(max-width:625px) {
+        &.h2 {
+          font-size:20px;
+          top:7px;
+        }
+      }
+      @media(max-width:575px) {
+        &.h2 {
+          font-size:16px;
+        }
+      }
+    }
 }
 .panel-body {
     padding:5px;
