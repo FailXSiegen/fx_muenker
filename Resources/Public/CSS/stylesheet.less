@@ -307,7 +307,12 @@ body > header.header {
         }
         background-position: center -20px;   
         .transition(background-position .1s ease-in);
-    
+        .phone {
+          @media(max-width:767px) {
+            top:103px;
+            .transition(top .1s ease-in);
+          }
+        }
     }
     .phone {
       position: absolute;
@@ -317,14 +322,18 @@ body > header.header {
         margin-top:0;
       }
       @media(max-width:767px) {
-        left:225px;
-        right:auto;
-        top:0;
+        right:30px;
+        .transition(top .1s ease-in);
+        top:112px;
+        color:white;
+        z-index:999;
+        a {
+          color:white;
+        }
       }
       @media(max-width:625px) {
         &.h2 {
           font-size:20px;
-          top:7px;
         }
       }
       @media(max-width:575px) {

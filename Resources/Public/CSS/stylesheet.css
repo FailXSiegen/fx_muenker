@@ -927,6 +927,16 @@ body > header.header.small .logo-wrap {
   -o-transition: margin 0.1s ease-in;
   transition: margin 0.1s ease-in;
 }
+@media (max-width: 767px) {
+  body > header.header.small .phone {
+    top: 103px;
+    -webkit-transition: top 0.1s ease-in;
+    -moz-transition: top 0.1s ease-in;
+    -ms-transition: top 0.1s ease-in;
+    -o-transition: top 0.1s ease-in;
+    transition: top 0.1s ease-in;
+  }
+}
 body > header.header .phone {
   position: absolute;
   right: 15px;
@@ -937,15 +947,23 @@ body > header.header .phone.h2 {
 }
 @media (max-width: 767px) {
   body > header.header .phone {
-    left: 225px;
-    right: auto;
-    top: 0;
+    right: 30px;
+    -webkit-transition: top 0.1s ease-in;
+    -moz-transition: top 0.1s ease-in;
+    -ms-transition: top 0.1s ease-in;
+    -o-transition: top 0.1s ease-in;
+    transition: top 0.1s ease-in;
+    top: 112px;
+    color: white;
+    z-index: 999;
+  }
+  body > header.header .phone a {
+    color: white;
   }
 }
 @media (max-width: 625px) {
   body > header.header .phone.h2 {
     font-size: 20px;
-    top: 7px;
   }
 }
 @media (max-width: 575px) {
