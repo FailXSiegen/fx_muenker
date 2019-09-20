@@ -14,7 +14,9 @@
                                 <f:then>
                                      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                                         <meta itemprop="position" content="{it.cycle}">
-                                            <f:link.page additionalAttributes="{itemprop:'url'}" title="{level.title}" pageUid="{level.uid}">{f:if(condition:'{level.nav_title}',then:'{level.nav_title}',else:'{level.title}')}</f:link.page>	
+                                            <f:link.page additionalAttributes="{itemprop:'item',itemtype:'https://schema.org/Thing'}" title="{level.title}" pageUid="{level.uid}">
+                                                <span itemprop="name">{f:if(condition:'{level.nav_title}',then:'{level.nav_title}',else:'{level.title}')}</span>
+                                            </f:link.page>
                                             <span class="divider">-</span>
                                        </li>
                                 </f:then>
@@ -26,7 +28,9 @@
                                         <f:else>
                                          <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                                             <meta itemprop="position" content="{it.cycle}">
-                                            {f:if(condition:'{level.nav_title}',then:'{level.nav_title}',else:'{level.title}')}
+                                             <f:link.page additionalAttributes="{itemprop:'item',itemtype:'https://schema.org/Thing'}" title="{level.title}" pageUid="{level.uid}">
+                                                <span itemprop="name">{f:if(condition:'{level.nav_title}',then:'{level.nav_title}',else:'{level.title}')}</span>
+                                             </f:link.page>
                                            </li>
                                         </f:else>
                                      </f:if>
@@ -37,7 +41,9 @@
                         <f:else>
                          <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                             <meta itemprop="position" content="{it.cycle}">
-                                <f:link.page additionalAttributes="{itemprop:'url'}" title="{level.title}" pageUid="{level.uid}">{f:if(condition:'{level.nav_title}',then:'{level.nav_title}',else:'{level.title}')}</f:link.page>	
+                                <f:link.page additionalAttributes="{itemprop:'item',itemtype:'https://schema.org/Thing'}" title="{level.title}" pageUid="{level.uid}">
+                                    <span itemprop="name">{f:if(condition:'{level.nav_title}',then:'{level.nav_title}',else:'{level.title}')}</span>
+                                </f:link.page>
                                 <span class="divider">-</span>		
                          </li>
                         </f:else>
@@ -48,13 +54,13 @@
             <f:if condition="{breadcrumb_news}"> 
                 <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                     <meta itemprop="position" content="2">
-                    {breadcrumb_news}
+                    <span itemprop="name">{breadcrumb_news}</span>
                 </li>
             </f:if>
             <f:if condition="{breadcrumb_glossar}">
                 <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                     <meta itemprop="position" content="2">
-                    {breadcrumb_glossar}
+                    <span itemprop="name">{breadcrumb_glossar}</span>
                 </li>
             </f:if>
         </ul>
