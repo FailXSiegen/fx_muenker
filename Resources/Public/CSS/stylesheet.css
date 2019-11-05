@@ -1385,6 +1385,15 @@ body > header.header .phone.h2 {
   background-color: #082b53;
   text-decoration: none;
 }
+@media (min-width: 992px) {
+  #header-nav .layout-2 ul.level-three {
+    width: 550px;
+  }
+  #header-nav .layout-2 ul.level-three li {
+    width: 50%;
+    display: inline-block;
+  }
+}
 main {
   margin-top: 180px;
   margin-bottom: 20px;
@@ -1758,5 +1767,58 @@ ul.reference li {
 }
 .news-clear {
   clear: both;
+}
+.anfrage-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.anfrage-container a.btn-primary {
+  background: none;
+  background-color: #082b53;
+  border-color: #082b53;
+  color: white;
+}
+.anfrage-container a.btn-primary:hover,
+.anfrage-container a.btn-primary:active,
+.anfrage-container a.btn-primary:focus {
+  color: white;
+  background-color: #08466a;
+}
+.powermail_form_4 .btn-primary {
+  background: none;
+  background-color: #082b53;
+  border-color: #082b53;
+  color: white;
+}
+.powermail_form_4 .btn-primary:hover,
+.powermail_form_4 .btn-primary:active,
+.powermail_form_4 .btn-primary:focus {
+  color: white;
+  background-color: #08466a;
+}
+.powermail_form_4 .powermail_fieldset + .powermail_fieldset {
+  border-top: 2px solid #082b53;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.powermail_form_4 a {
+  text-decoration: underline;
+}
+.powermail_fieldwrap_type_check.nolabel {
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+}
+.color-box {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+#fancybox-wrap {
+  position: fixed;
+  top: 30px;
+}
+.fancybox-enabled body {
+  overflow: hidden;
 }
 /*# sourceMappingURL=stylesheet.css.map */

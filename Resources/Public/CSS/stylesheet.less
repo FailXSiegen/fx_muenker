@@ -777,7 +777,19 @@ body > header.header {
                 }                
             }
 		}
-	}	
+	}
+  @media(min-width:992px) {
+    .layout-2 {
+      ul.level-three {
+        width: 550px;
+        li {
+          width:50%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
 }
 main {
     margin-top:180px;
@@ -1184,4 +1196,64 @@ ul.reference {
 
 .news-clear {
   clear: both;
+}
+.anfrage-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  a.btn-primary {
+    background:none;
+    background-color: #082b53;
+    border-color: #082b53;
+    color:white;
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      background-color: #08466a;
+    }
+  }
+}
+.powermail_form_4 {
+  .btn-primary {
+    background:none;
+    background-color: #082b53;
+    border-color: #082b53;
+    color:white;
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      background-color: #08466a;
+    }
+  }
+  .powermail_fieldset {
+    + .powermail_fieldset {
+      border-top: 2px solid #082b53;
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+.powermail_fieldwrap_type_check {
+  &.nolabel {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+  }
+}
+.color-box {
+  width:40px;
+  height:40px;
+  display:block;
+}
+
+#fancybox-wrap {
+  position: fixed;
+  top:30px;
+}
+.fancybox-enabled body {
+  overflow:hidden;
 }

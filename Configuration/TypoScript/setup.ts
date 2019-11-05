@@ -522,3 +522,19 @@ page.headerData {
 }
 [global]
 
+plugin.tx_powermail {
+    settings {
+        setup {
+            prefill {
+                produktname = TEXT
+                produktname.data = page:title
+            }
+        }
+    }
+}
+lib.pagetitle = TEXT
+lib.pagetitle.data = page:title
+lib.pagetitle.wrap = <h3>|</h3>
+
+lib.produktanfrage < styles.content.get
+lib.produktanfrage.select.pidInList = 1095

@@ -14,5 +14,8 @@
 				class="powermail_input {settings.styles.framework.fieldClasses} {vh:Validation.ErrorClass(field:field, class:'powermail_field_error')}"
 				additionalAttributes="{vh:Validation.ValidationDataAttribute(field:field)}"
 				id="powermail_field_{field.marker}" />
+		<f:if condition="{field.description}">
+			{field.description}
+		</f:if>
 	</div>
 </div>

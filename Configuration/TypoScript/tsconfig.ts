@@ -41,7 +41,7 @@ TCEFORM {
       }
     }
   }  
-  tx_powermail_domain_model_forms {
+  tx_powermail_domain_model_form {
     css {
       removeItems = layout1, layout2, layout3
       addItems {
@@ -58,11 +58,12 @@ TCEFORM {
         col-md-11 = col-md-11
         col-md-12 = col-md-12
         row = row
+        hidden = hidden
       }
     }
   } 
-  tx_powermail_domain_model_pages < .tx_powermail_domain_model_forms
-  tx_powermail_domain_model_fields < .tx_powermail_domain_model_forms
+  tx_powermail_domain_model_page < .tx_powermail_domain_model_form
+  tx_powermail_domain_model_field < .tx_powermail_domain_model_form
 }
 tx_news.templateLayouts {
   1 = Default
